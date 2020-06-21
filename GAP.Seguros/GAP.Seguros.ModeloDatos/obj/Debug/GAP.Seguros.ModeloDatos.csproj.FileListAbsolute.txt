@@ -12,3 +12,17 @@ C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.ModeloDatos\obj\Debug\GAP
 C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.ModeloDatos\obj\Debug\GAP.Seguros.ModeloDatos.pdb
 C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.ModeloDatos\bin\Debug\GAP.Seguros.Entidades.dll
 C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.ModeloDatos\bin\Debug\GAP.Seguros.Entidades.pdb
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\bin\Debug\GAP.Seguros.ModeloDatos.dll.config
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\bin\Debug\GAP.Seguros.ModeloDatos.dll
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\bin\Debug\GAP.Seguros.ModeloDatos.pdb
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\bin\Debug\EntityFramework.dll
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\bin\Debug\GAP.Seguros.Entidades.dll
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\bin\Debug\GAP.Seguros.Entidades.pdb
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\bin\Debug\EntityFramework.xml
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\obj\Debug\GAP.Seguros.ModeloDatos.csprojAssemblyReference.cache
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\obj\Debug\GAP.Seguros.ModeloDatos.csproj.CoreCompileInputs.cache
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\obj\Debug\GAP.Seguros.ModeloDatos.csproj.CopyComplete
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\obj\Debug\GAP.Seguros.ModeloDatos.dll
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\obj\Debug\GAP.Seguros.ModeloDatos.pdb

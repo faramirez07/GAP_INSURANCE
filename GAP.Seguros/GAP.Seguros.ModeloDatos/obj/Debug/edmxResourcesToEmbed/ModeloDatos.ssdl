@@ -1,4 +1,155 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="ModeloGAP.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityContainer Name="ModeloGAPStoreContainer" />
+<Schema Namespace="ModeloGAP.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Edad" Type="int" Nullable="false" />
+    <Property Name="Nacionalidad" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Activo" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModificacion" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModificacion" Type="datetime" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'PRUEBA.dbo.ClientePoliza' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="ClientePoliza">
+    <Key>
+      <PropertyRef Name="IdClientePoliza" />
+      <PropertyRef Name="IdCliente" />
+      <PropertyRef Name="IdPoliza" />
+      <PropertyRef Name="Activo" />
+      <PropertyRef Name="UsuarioCreacion" />
+      <PropertyRef Name="FechaCreacion" />
+    </Key>
+    <Property Name="IdClientePoliza" Type="int" Nullable="false" />
+    <Property Name="IdCliente" Type="int" Nullable="false" />
+    <Property Name="IdPoliza" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModificacion" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModificacion" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Poliza">
+    <Key>
+      <PropertyRef Name="IdPoliza" />
+    </Key>
+    <Property Name="IdPoliza" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTipoPoliza" Type="int" Nullable="false" />
+    <Property Name="Inicio" Type="datetime" Nullable="false" />
+    <Property Name="Duracion" Type="int" Nullable="false" />
+    <Property Name="Precio" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="IdTipoRiesgo" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModificacion" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModificacion" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tipo_Poliza">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="Porcentaje" Type="int" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="UsuarioCreacion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModificacion" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModificacion" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tipo_Riesgo">
+    <Key>
+      <PropertyRef Name="IdRiesgo" />
+    </Key>
+    <Property Name="IdRiesgo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ClientePoliza_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="ClientePoliza" Type="Self.ClientePoliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="ClientePoliza">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClientePoliza_Poliza">
+    <End Role="Poliza" Type="Self.Poliza" Multiplicity="1" />
+    <End Role="ClientePoliza" Type="Self.ClientePoliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Poliza">
+        <PropertyRef Name="IdPoliza" />
+      </Principal>
+      <Dependent Role="ClientePoliza">
+        <PropertyRef Name="IdPoliza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Poliza_Tipo_Poliza">
+    <End Role="Tipo_Poliza" Type="Self.Tipo_Poliza" Multiplicity="1" />
+    <End Role="Poliza" Type="Self.Poliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Poliza">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Poliza">
+        <PropertyRef Name="IdTipoPoliza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Poliza_Tipo_Riesgo">
+    <End Role="Tipo_Riesgo" Type="Self.Tipo_Riesgo" Multiplicity="1" />
+    <End Role="Poliza" Type="Self.Poliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Riesgo">
+        <PropertyRef Name="IdRiesgo" />
+      </Principal>
+      <Dependent Role="Poliza">
+        <PropertyRef Name="IdTipoRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModeloGAPStoreContainer">
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Poliza" EntityType="Self.Poliza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipo_Poliza" EntityType="Self.Tipo_Poliza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipo_Riesgo" EntityType="Self.Tipo_Riesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientePoliza" EntityType="Self.ClientePoliza" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ClientePoliza].[IdClientePoliza] AS [IdClientePoliza], 
+    [ClientePoliza].[IdCliente] AS [IdCliente], 
+    [ClientePoliza].[IdPoliza] AS [IdPoliza], 
+    [ClientePoliza].[Activo] AS [Activo], 
+    [ClientePoliza].[UsuarioCreacion] AS [UsuarioCreacion], 
+    [ClientePoliza].[FechaCreacion] AS [FechaCreacion], 
+    [ClientePoliza].[UsuarioModificacion] AS [UsuarioModificacion], 
+    [ClientePoliza].[FechaModificacion] AS [FechaModificacion]
+    FROM [dbo].[ClientePoliza] AS [ClientePoliza]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_ClientePoliza_Cliente" Association="Self.FK_ClientePoliza_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="ClientePoliza" EntitySet="ClientePoliza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientePoliza_Poliza" Association="Self.FK_ClientePoliza_Poliza">
+      <End Role="Poliza" EntitySet="Poliza" />
+      <End Role="ClientePoliza" EntitySet="ClientePoliza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Poliza_Tipo_Poliza" Association="Self.FK_Poliza_Tipo_Poliza">
+      <End Role="Tipo_Poliza" EntitySet="Tipo_Poliza" />
+      <End Role="Poliza" EntitySet="Poliza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Poliza_Tipo_Riesgo" Association="Self.FK_Poliza_Tipo_Riesgo">
+      <End Role="Tipo_Riesgo" EntitySet="Tipo_Riesgo" />
+      <End Role="Poliza" EntitySet="Poliza" />
+    </AssociationSet>
+  </EntityContainer>
 </Schema>
