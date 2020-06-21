@@ -194,6 +194,10 @@
       <Project>{fb336be5-ddb8-41f1-8ae9-37c5972a87ec}</Project>
       <Name>GAP.Seguros.LogicaNegocio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GAP.Seguros.Servicio\GAP.Seguros.Servicio.csproj">
+      <Project>{2f377083-85ac-4615-9c53-ca9ec48ef6a4}</Project>
+      <Name>GAP.Seguros.Servicio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

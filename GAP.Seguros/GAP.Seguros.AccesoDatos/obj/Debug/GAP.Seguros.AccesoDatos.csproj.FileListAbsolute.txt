@@ -26,3 +26,4 @@ C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.AccesoD
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.AccesoDatos\obj\Debug\GAP.Seguros.AccesoDatos.csproj.CopyComplete
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.AccesoDatos\obj\Debug\GAP.Seguros.AccesoDatos.dll
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.AccesoDatos\obj\Debug\GAP.Seguros.AccesoDatos.pdb
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.AccesoDatos\bin\Debug\es\EntityFramework.resources.dll

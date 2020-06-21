@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAP.Seguros.Entidades", "GA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAP.Seguros.ModeloDatos", "GAP.Seguros.ModeloDatos\GAP.Seguros.ModeloDatos.csproj", "{0D334C87-35AB-49EC-BC6C-A6C49B954D1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seguros", "Seguros\Seguros.csproj", "{6F1BB062-4B1E-4B3E-B7C6-D22129551712}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAP.Seguros.Servicio", "GAP.Seguros.Servicio\GAP.Seguros.Servicio.csproj", "{2F377083-85AC-4615-9C53-CA9EC48EF6A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{0D334C87-35AB-49EC-BC6C-A6C49B954D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D334C87-35AB-49EC-BC6C-A6C49B954D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D334C87-35AB-49EC-BC6C-A6C49B954D1A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F1BB062-4B1E-4B3E-B7C6-D22129551712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F1BB062-4B1E-4B3E-B7C6-D22129551712}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F1BB062-4B1E-4B3E-B7C6-D22129551712}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F1BB062-4B1E-4B3E-B7C6-D22129551712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F377083-85AC-4615-9C53-CA9EC48EF6A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F377083-85AC-4615-9C53-CA9EC48EF6A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F377083-85AC-4615-9C53-CA9EC48EF6A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F377083-85AC-4615-9C53-CA9EC48EF6A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
