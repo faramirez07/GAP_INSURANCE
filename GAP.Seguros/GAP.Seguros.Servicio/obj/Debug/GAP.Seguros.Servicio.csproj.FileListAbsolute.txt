@@ -1,2 +1,0 @@
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.Servicio\obj\Debug\GAP.Seguros.Servicio.csprojAssemblyReference.cache
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.Servicio\obj\Debug\GAP.Seguros.Servicio.csproj.CoreCompileInputs.cache

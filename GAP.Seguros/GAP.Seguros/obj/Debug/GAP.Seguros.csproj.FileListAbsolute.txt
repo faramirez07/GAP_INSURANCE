@@ -81,6 +81,8 @@ C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros\bin\GAP.Seguros.Entidades
 C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros\bin\GAP.Seguros.LogicaNegocio.dll
 C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros\bin\GAP.Seguros.Entidades.pdb
 C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros\bin\GAP.Seguros.LogicaNegocio.pdb
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\obj\Debug\GAP.Seguros.csprojAssemblyReference.cache
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\obj\Debug\GAP.Seguros.csproj.CoreCompileInputs.cache
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\GAP.Seguros.dll.config
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\GAP.Seguros.dll
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\GAP.Seguros.pdb
@@ -135,7 +137,6 @@ C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\ros
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\Antlr3.Runtime.dll
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\GAP.Seguros.Entidades.dll
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\GAP.Seguros.LogicaNegocio.dll
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\Newtonsoft.Json.dll
@@ -148,7 +149,6 @@ C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\Sys
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\System.Web.WebPages.Razor.dll
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\WebGrease.dll
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\GAP.Seguros.Entidades.pdb
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\GAP.Seguros.LogicaNegocio.pdb
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\System.Web.Helpers.xml
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\System.Web.Mvc.xml
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\System.Web.Optimization.xml
@@ -159,11 +159,6 @@ C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\Sys
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\Newtonsoft.Json.xml
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\Antlr3.Runtime.pdb
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\obj\Debug\GAP.Seguros.csprojAssemblyReference.cache
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\obj\Debug\GAP.Seguros.csproj.CoreCompileInputs.cache
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\obj\Debug\GAP.Seguros.csproj.CopyComplete
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\obj\Debug\GAP.Seguros.dll
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\obj\Debug\GAP.Seguros.pdb
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\es\System.Web.Helpers.resources.dll
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\es\System.Web.Mvc.resources.dll
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\es\System.Web.Optimization.resources.dll
@@ -171,15 +166,7 @@ C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\es\
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\es\System.Web.WebPages.resources.dll
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\GAP.Seguros.Servicio.dll
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\System.Web.Http.dll
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\System.Net.Http.Formatting.dll
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\System.Web.Http.WebHost.dll
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\GAP.Seguros.Servicio.pdb
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\GAP.Seguros.Servicio.dll.config
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\System.Web.Http.xml
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\System.Net.Http.Formatting.xml
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\System.Web.Http.WebHost.xml
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\es\System.Web.Http.resources.dll
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\es\System.Net.Http.Formatting.resources.dll
-C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\obj\Debug\GAP.Seguros.csproj.CopyComplete
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\obj\Debug\GAP.Seguros.dll
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\obj\Debug\GAP.Seguros.pdb
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros\bin\GAP.Seguros.Entidades.dll.config
