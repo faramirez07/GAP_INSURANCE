@@ -1,0 +1,11 @@
+C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.LogicaNegocio\bin\Debug\GAP.Seguros.LogicaNegocio.dll
+C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.LogicaNegocio\bin\Debug\GAP.Seguros.LogicaNegocio.pdb
+C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.LogicaNegocio\obj\Debug\GAP.Seguros.LogicaNegocio.csprojAssemblyReference.cache
+C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.LogicaNegocio\obj\Debug\GAP.Seguros.LogicaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.LogicaNegocio\obj\Debug\GAP.Seguros.LogicaNegocio.dll
+C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.LogicaNegocio\obj\Debug\GAP.Seguros.LogicaNegocio.pdb
+C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.LogicaNegocio\bin\Debug\GAP.Seguros.AccesoDatos.dll
+C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.LogicaNegocio\bin\Debug\GAP.Seguros.Entidades.dll
+C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.LogicaNegocio\bin\Debug\GAP.Seguros.AccesoDatos.pdb
+C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.LogicaNegocio\bin\Debug\GAP.Seguros.Entidades.pdb
+C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.LogicaNegocio\obj\Debug\GAP.Seguros.LogicaNegocio.csproj.CopyComplete

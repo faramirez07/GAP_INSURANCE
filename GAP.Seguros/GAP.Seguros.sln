@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAP.Seguros", "GAP.Seguros\GAP.Seguros.csproj", "{849E8817-34B6-4417-96BF-63856878C452}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAP.Seguros.Tests", "GAP.Seguros.Tests\GAP.Seguros.Tests.csproj", "{B6855111-CC6E-47AE-9DCC-8780FB862304}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAP.Seguros.AccesoDatos", "GAP.Seguros.AccesoDatos\GAP.Seguros.AccesoDatos.csproj", "{E1BA4008-812B-4E1E-8B94-243710F5F44D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAP.Seguros.LogicaNegocio", "GAP.Seguros.LogicaNegocio\GAP.Seguros.LogicaNegocio.csproj", "{FB336BE5-DDB8-41F1-8AE9-37C5972A87EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAP.Seguros.Entidades", "GAP.Seguros.Entidades\GAP.Seguros.Entidades.csproj", "{9ADBBA98-12AE-481C-873E-BBDE57B11792}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAP.Seguros.ModeloDatos", "GAP.Seguros.ModeloDatos\GAP.Seguros.ModeloDatos.csproj", "{0D334C87-35AB-49EC-BC6C-A6C49B954D1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{849E8817-34B6-4417-96BF-63856878C452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{849E8817-34B6-4417-96BF-63856878C452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{849E8817-34B6-4417-96BF-63856878C452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{849E8817-34B6-4417-96BF-63856878C452}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6855111-CC6E-47AE-9DCC-8780FB862304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6855111-CC6E-47AE-9DCC-8780FB862304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6855111-CC6E-47AE-9DCC-8780FB862304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6855111-CC6E-47AE-9DCC-8780FB862304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1BA4008-812B-4E1E-8B94-243710F5F44D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1BA4008-812B-4E1E-8B94-243710F5F44D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1BA4008-812B-4E1E-8B94-243710F5F44D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1BA4008-812B-4E1E-8B94-243710F5F44D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB336BE5-DDB8-41F1-8AE9-37C5972A87EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB336BE5-DDB8-41F1-8AE9-37C5972A87EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB336BE5-DDB8-41F1-8AE9-37C5972A87EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB336BE5-DDB8-41F1-8AE9-37C5972A87EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ADBBA98-12AE-481C-873E-BBDE57B11792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ADBBA98-12AE-481C-873E-BBDE57B11792}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ADBBA98-12AE-481C-873E-BBDE57B11792}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ADBBA98-12AE-481C-873E-BBDE57B11792}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D334C87-35AB-49EC-BC6C-A6C49B954D1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D334C87-35AB-49EC-BC6C-A6C49B954D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D334C87-35AB-49EC-BC6C-A6C49B954D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D334C87-35AB-49EC-BC6C-A6C49B954D1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89CC7440-B85D-432C-BA63-E058797B39FD}
+	EndGlobalSection
+EndGlobal

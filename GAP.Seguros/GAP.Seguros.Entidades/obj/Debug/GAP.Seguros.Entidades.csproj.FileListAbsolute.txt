@@ -1,0 +1,5 @@
+C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.Entidades\bin\Debug\GAP.Seguros.Entidades.dll
+C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.Entidades\bin\Debug\GAP.Seguros.Entidades.pdb
+C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.Entidades\obj\Debug\GAP.Seguros.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.Entidades\obj\Debug\GAP.Seguros.Entidades.dll
+C:\Users\framirez\source\repos\GAP.Seguros\GAP.Seguros.Entidades\obj\Debug\GAP.Seguros.Entidades.pdb
