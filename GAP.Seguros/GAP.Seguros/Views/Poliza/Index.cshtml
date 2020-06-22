@@ -1,0 +1,52 @@
+﻿@model List<GAP.Seguros.ModeloDatos.Poliza>
+@{
+    ViewBag.Title = "Poliza";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>
+    <a href="@Url.Action("Nuevo", "Poliza")" class="btn btn-primary right"></a>
+    Listado de Polizas</h2>
+<hr />
+<Table>
+    <thead>
+        <tr>
+            <td>IdPoliza</td>
+            <td>IdTipoPoliza</td>
+            <td>Inicio</td>
+            @*<td>Duracion</td>
+            <td>Precio</td>
+            <td>IdTipoRiesgo</td>
+            <td>Activo</td>*@
+            <td>UsuarioCreacion</td>
+            <td>FechaCreacion</td>
+            <td>Accciones</td>
+
+    </thead>
+    <tbody>
+        @foreach (var poliza in Model)
+        {
+            <tr>
+                @* alt + shif para marcar todos los renglones y cambiar en todos la palabra *@/
+                <td>@poliza.IdPoliza</td>
+                <td>@poliza.IdTipoPoliza</td>
+                <td>@poliza.Inicio</td>
+                @*<td>@poliza.Duracion</td>
+                <td>@poliza.Precio</td>
+                <td>@poliza.IdTipoRiesgo</td>
+                <td>@poliza.Activo</td>*@
+                <td>@poliza.UsuarioCreacion</td>
+                <td>@poliza.FechaCreacion</td>
+                <td>
+                    <a href="@Url.Action("Actualizar", "Poliza", new { id = poliza.IdPoliza})" class="btn btn-success right">Actualizar</a>
+                    <a href="@Url.Action("Eliminar", "Poliza", new { id = poliza.IdPoliza})" class="btn btn-danger right">Eliminar</a>
+                    <a href="@Url.Action("Detalle", "Poliza", new { id = poliza.IdPoliza})" class="btn btn-default right">Ver Detalle</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</Table>
+
+
+

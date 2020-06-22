@@ -17,7 +17,7 @@ namespace GAP.Seguros.Controllers
             {
                 // Si el usuario está autenticado 
                 // retorna la Vista de administración.
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home1");
             }
             else
             {

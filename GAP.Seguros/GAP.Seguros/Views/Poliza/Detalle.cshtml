@@ -1,0 +1,49 @@
+﻿@model GAP.Seguros.ModeloDatos.Poliza
+@{
+    ViewBag.Title = "Detalle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalle Poliza</h2>
+<hr />
+
+<div class="form-group">
+    <label>IdPoliza</label>
+    @Model.IdPoliza 
+</div>
+<div class="form-group">
+    <label>IdTipoPoliza</label>
+    @Model.Tipo_Poliza
+</div>
+<div class="form-group">
+    <label>Inicio</label>
+    @Model.Inicio
+</div>
+<div class="form-group">
+    <label>Duracion</label>
+    @Model.Duracion
+</div>
+<div class="form-group">
+    <label>Precio</label>
+    @Model.Precio
+</div>
+<div class="form-group">
+    <label>IdTipoRiesgo</label>
+    @Model.IdTipoRiesgo
+</div>
+<div class="form-group">
+    <label>Activo</label>
+    @Model.Activo
+</div>
+<div class="form-group">
+    <label>UsuarioCreacion</label>
+    @Model.UsuarioCreacion
+</div>
+<div class="form-group">
+    <label>FechaCreacion</label>
+    @Model.FechaCreacion
+</div>
+<div class="form-group">
+    <a href="@Url.Action("Index", "Poliza")">Regresar</a>
+</div>
+

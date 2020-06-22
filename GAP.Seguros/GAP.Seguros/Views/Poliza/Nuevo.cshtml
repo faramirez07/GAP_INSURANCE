@@ -1,0 +1,54 @@
+﻿@model GAP.Seguros.ModeloDatos.Poliza
+@{
+    ViewBag.Title = "Nuevo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Nueva Póliza</h2>
+<hr />
+
+<form>
+    <div class="form-group">
+        <label>IdPoliza</label>
+        @Html.TextBoxFor(x => x.IdPoliza, new { @class = "form-control" , @readonly="readonly"})
+    </div>
+    <div class="form-group">
+        <label>IdTipoPoliza</label>
+        @Html.TextBoxFor(x => x.IdTipoPoliza, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+    <div class="form-group">
+        <label>Inicio</label>
+        @Html.TextBoxFor(x => x.Inicio, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+    <div class="form-group">
+        <label>Duracion</label>
+        @Html.TextBoxFor(x => x.Duracion, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+    <div class="form-group">
+        <label>Precio</label>
+        @Html.TextBoxFor(x => x.Precio, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+    <div class="form-group">
+        <label>IdTipoRiesgo</label>
+        @Html.TextBoxFor(x => x.IdTipoRiesgo, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+    <div class="form-group">
+        <label>Activo</label>
+        @Html.TextBoxFor(x => x.Activo, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+    <div class="form-group">
+        <label>UsuarioCreacion</label>
+        @Html.TextBoxFor(x => x.UsuarioCreacion, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+    <div class="form-group">
+        <label>FechaCreacion</label>
+        @Html.TextBoxFor(x => x.FechaCreacion, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn-success" value="Enviar"/>
+        <a href="@Url.Action("Index", "Poliza")">Regresar</a>
+    </div>
+
+
+</form>
+
