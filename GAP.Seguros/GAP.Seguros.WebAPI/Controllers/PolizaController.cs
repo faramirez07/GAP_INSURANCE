@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using GAP.Seguros.ModeloDatos;
+
 namespace GAP.Seguros.WebAPI.Controllers
 {
     public class PolizaController : ApiController
@@ -41,24 +42,48 @@ namespace GAP.Seguros.WebAPI.Controllers
 
          }
 
+
+
         [HttpPut]
         public bool Put(Poliza poliza)
         {
+
             using (var context = new EntidadesGAP())
             {
-                var polizaActualizar = context.Polizas.FirstOrDefault(x => x.IdPoliza == poliza.IdPoliza);
-                polizaActualizar.IdTipoPoliza = poliza.IdTipoPoliza;
+                DateTime fecha = DateTime.Now;
+                //Poliza pol = context.Polizas.Create();
+                //pol.IdPoliza = poliza.IdPoliza;
+                //context.Polizas.Attach(pol);
+                //var polizaActualizar = context.Polizas.SingleOrDefault(x => x.IdPoliza == poliza.IdPoliza);
+                //polizaActualizar.TipoPoliza = poliza.TipoPoliza;
+                //polizaActualizar.Nombre = poliza.Nombre;
+                //polizaActualizar.Descripcion = poliza.Descripcion;
+                //polizaActualizar.Inicio = poliza.Inicio;
+                //polizaActualizar.Duracion = poliza.Duracion;
+                //polizaActualizar.Precio = poliza.Precio;
+                //polizaActualizar.TipoRiesgo = poliza.TipoRiesgo;
+                //polizaActualizar.Activo = Convert.ToBoolean(0);
+                //polizaActualizar.UsuarioCreacion = poliza.UsuarioCreacion;
+                //polizaActualizar.FechaCreacion = fecha;
+                //int pruebaf = context.SaveChanges();
+                var polizaActualizar = context.Polizas.SingleOrDefault(x => x.IdPoliza == poliza.IdPoliza);
+
+                polizaActualizar.IdPoliza = poliza.IdPoliza;
+                polizaActualizar.TipoPoliza = poliza.TipoPoliza;
+                polizaActualizar.Nombre = poliza.Nombre;
+                polizaActualizar.Descripcion = poliza.Descripcion;
                 polizaActualizar.Inicio = poliza.Inicio;
                 polizaActualizar.Duracion = poliza.Duracion;
                 polizaActualizar.Precio = poliza.Precio;
-                poliza.IdTipoRiesgo = poliza.IdTipoRiesgo;
-                poliza.Activo = poliza.Activo;
-                polizaActualizar.UsuarioModificacion = poliza.UsuarioModificacion;
-                polizaActualizar.FechaModificacion = poliza.FechaModificacion;
-                return context.SaveChanges() > 0;
+                polizaActualizar.TipoRiesgo = poliza.TipoRiesgo;
+                polizaActualizar.Activo = Convert.ToBoolean(poliza.Activo);
+                polizaActualizar.UsuarioCreacion = poliza.UsuarioCreacion;
+                polizaActualizar.FechaCreacion = poliza.FechaCreacion;
+
+                return context.SaveChanges()>0;
             }
 
-         }
+        }
 
         [HttpDelete]
         public bool Delete(int id)

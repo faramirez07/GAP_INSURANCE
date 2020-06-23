@@ -25,10 +25,8 @@ namespace GAP.Seguros.ModeloDatos
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Cliente> Clientes { get; set; }
         public virtual DbSet<Poliza> Polizas { get; set; }
-        public virtual DbSet<Tipo_Poliza> Tipo_Poliza { get; set; }
-        public virtual DbSet<Tipo_Riesgo> Tipo_Riesgo { get; set; }
-        public virtual DbSet<ClientePoliza> ClientePolizas { get; set; }
+        public virtual DbSet<TipoPoliza> TipoPolizas { get; set; }
+        public virtual DbSet<TipoRiesgo> TipoRiesgoes { get; set; }
     }
 }

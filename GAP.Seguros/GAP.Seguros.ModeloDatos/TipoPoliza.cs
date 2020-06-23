@@ -12,18 +12,10 @@ namespace GAP.Seguros.ModeloDatos
     using System;
     using System.Collections.Generic;
     
-    public partial class ClientePoliza
+    public partial class TipoPoliza
     {
-        public int IdClientePoliza { get; set; }
-        public int IdCliente { get; set; }
-        public int IdPoliza { get; set; }
+        public int IdTipo { get; set; }
+        public string Nombre { get; set; }
         public bool Activo { get; set; }
-        public string UsuarioCreacion { get; set; }
-        public System.DateTime FechaCreacion { get; set; }
-        public string UsuarioModificacion { get; set; }
-        public Nullable<System.DateTime> FechaModificacion { get; set; }
-    
-        public virtual Cliente Cliente { get; set; }
-        public virtual Poliza Poliza { get; set; }
     }
 }

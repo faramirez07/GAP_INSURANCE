@@ -203,6 +203,8 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PolizaController.cs" />
+    <Compile Include="Controllers\TipoPolizaController.cs" />
+    <Compile Include="Controllers\TipoRiesgoController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

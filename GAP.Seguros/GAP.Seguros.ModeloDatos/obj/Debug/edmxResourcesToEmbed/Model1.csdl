@@ -1,150 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ModeloGAP" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="Cliente">
-    <Key>
-      <PropertyRef Name="IdCliente" />
-    </Key>
-    <Property Name="IdCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Edad" Type="Int32" Nullable="false" />
-    <Property Name="Nacionalidad" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Activo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="UsuarioCreacion" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="UsuarioModificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="ClientePolizas" Relationship="Self.FK_ClientePoliza_Cliente" FromRole="Cliente" ToRole="ClientePoliza" />
-  </EntityType>
+  <EntityContainer Name="EntidadesGAP" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Polizas" EntityType="ModeloGAP.Poliza" />
+    <EntitySet Name="TipoPolizas" EntityType="ModeloGAP.TipoPoliza" />
+    <EntitySet Name="TipoRiesgoes" EntityType="ModeloGAP.TipoRiesgo" />
+  </EntityContainer>
   <EntityType Name="Poliza">
     <Key>
       <PropertyRef Name="IdPoliza" />
     </Key>
     <Property Name="IdPoliza" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="IdTipoPoliza" Type="Int32" Nullable="false" />
+    <Property Name="TipoPoliza" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Inicio" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Duracion" Type="Int32" Nullable="false" />
-    <Property Name="Precio" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="IdTipoRiesgo" Type="Int32" Nullable="false" />
+    <Property Name="Precio" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="TipoRiesgo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Activo" Type="Boolean" Nullable="false" />
-    <Property Name="UsuarioCreacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="UsuarioModificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="ClientePolizas" Relationship="Self.FK_ClientePoliza_Poliza" FromRole="Poliza" ToRole="ClientePoliza" />
-    <NavigationProperty Name="Tipo_Poliza" Relationship="Self.FK_Poliza_Tipo_Poliza" FromRole="Poliza" ToRole="Tipo_Poliza" />
-    <NavigationProperty Name="Tipo_Riesgo" Relationship="Self.FK_Poliza_Tipo_Riesgo" FromRole="Poliza" ToRole="Tipo_Riesgo" />
   </EntityType>
-  <EntityType Name="Tipo_Poliza">
+  <EntityType Name="TipoPoliza">
     <Key>
-      <PropertyRef Name="Id" />
+      <PropertyRef Name="IdTipo" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Porcentaje" Type="Int32" />
-    <Property Name="Activo" Type="Boolean" />
-    <Property Name="UsuarioCreacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="UsuarioModificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="Polizas" Relationship="Self.FK_Poliza_Tipo_Poliza" FromRole="Tipo_Poliza" ToRole="Poliza" />
+    <Property Name="IdTipo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
   </EntityType>
-  <EntityType Name="Tipo_Riesgo">
+  <EntityType Name="TipoRiesgo">
     <Key>
       <PropertyRef Name="IdRiesgo" />
     </Key>
     <Property Name="IdRiesgo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Polizas" Relationship="Self.FK_Poliza_Tipo_Riesgo" FromRole="Tipo_Riesgo" ToRole="Poliza" />
-  </EntityType>
-  <EntityType Name="ClientePoliza">
-    <Key>
-      <PropertyRef Name="IdClientePoliza" />
-      <PropertyRef Name="IdCliente" />
-      <PropertyRef Name="IdPoliza" />
-      <PropertyRef Name="Activo" />
-      <PropertyRef Name="UsuarioCreacion" />
-      <PropertyRef Name="FechaCreacion" />
-    </Key>
-    <Property Name="IdClientePoliza" Type="Int32" Nullable="false" />
-    <Property Name="IdCliente" Type="Int32" Nullable="false" />
-    <Property Name="IdPoliza" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Activo" Type="Boolean" Nullable="false" />
-    <Property Name="UsuarioCreacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="UsuarioModificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="Cliente" Relationship="Self.FK_ClientePoliza_Cliente" FromRole="ClientePoliza" ToRole="Cliente" />
-    <NavigationProperty Name="Poliza" Relationship="Self.FK_ClientePoliza_Poliza" FromRole="ClientePoliza" ToRole="Poliza" />
   </EntityType>
-  <Association Name="FK_ClientePoliza_Cliente">
-    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
-    <End Role="ClientePoliza" Type="Self.ClientePoliza" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Cliente">
-        <PropertyRef Name="IdCliente" />
-      </Principal>
-      <Dependent Role="ClientePoliza">
-        <PropertyRef Name="IdCliente" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ClientePoliza_Poliza">
-    <End Role="Poliza" Type="Self.Poliza" Multiplicity="1" />
-    <End Role="ClientePoliza" Type="Self.ClientePoliza" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Poliza">
-        <PropertyRef Name="IdPoliza" />
-      </Principal>
-      <Dependent Role="ClientePoliza">
-        <PropertyRef Name="IdPoliza" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Poliza_Tipo_Poliza">
-    <End Role="Tipo_Poliza" Type="Self.Tipo_Poliza" Multiplicity="1" />
-    <End Role="Poliza" Type="Self.Poliza" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Tipo_Poliza">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Poliza">
-        <PropertyRef Name="IdTipoPoliza" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Poliza_Tipo_Riesgo">
-    <End Role="Tipo_Riesgo" Type="Self.Tipo_Riesgo" Multiplicity="1" />
-    <End Role="Poliza" Type="Self.Poliza" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Tipo_Riesgo">
-        <PropertyRef Name="IdRiesgo" />
-      </Principal>
-      <Dependent Role="Poliza">
-        <PropertyRef Name="IdTipoRiesgo" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityContainer Name="EntidadesGAP" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Clientes" EntityType="Self.Cliente" />
-    <EntitySet Name="Polizas" EntityType="Self.Poliza" />
-    <EntitySet Name="Tipo_Poliza" EntityType="Self.Tipo_Poliza" />
-    <EntitySet Name="Tipo_Riesgo" EntityType="Self.Tipo_Riesgo" />
-    <EntitySet Name="ClientePolizas" EntityType="Self.ClientePoliza" />
-    <AssociationSet Name="FK_ClientePoliza_Cliente" Association="Self.FK_ClientePoliza_Cliente">
-      <End Role="Cliente" EntitySet="Clientes" />
-      <End Role="ClientePoliza" EntitySet="ClientePolizas" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ClientePoliza_Poliza" Association="Self.FK_ClientePoliza_Poliza">
-      <End Role="Poliza" EntitySet="Polizas" />
-      <End Role="ClientePoliza" EntitySet="ClientePolizas" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Poliza_Tipo_Poliza" Association="Self.FK_Poliza_Tipo_Poliza">
-      <End Role="Tipo_Poliza" EntitySet="Tipo_Poliza" />
-      <End Role="Poliza" EntitySet="Polizas" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Poliza_Tipo_Riesgo" Association="Self.FK_Poliza_Tipo_Riesgo">
-      <End Role="Tipo_Riesgo" EntitySet="Tipo_Riesgo" />
-      <End Role="Poliza" EntitySet="Polizas" />
-    </AssociationSet>
-  </EntityContainer>
 </Schema>
