@@ -51,23 +51,7 @@ namespace GAP.Seguros.WebAPI.Controllers
             using (var context = new EntidadesGAP())
             {
                 DateTime fecha = DateTime.Now;
-                //Poliza pol = context.Polizas.Create();
-                //pol.IdPoliza = poliza.IdPoliza;
-                //context.Polizas.Attach(pol);
-                //var polizaActualizar = context.Polizas.SingleOrDefault(x => x.IdPoliza == poliza.IdPoliza);
-                //polizaActualizar.TipoPoliza = poliza.TipoPoliza;
-                //polizaActualizar.Nombre = poliza.Nombre;
-                //polizaActualizar.Descripcion = poliza.Descripcion;
-                //polizaActualizar.Inicio = poliza.Inicio;
-                //polizaActualizar.Duracion = poliza.Duracion;
-                //polizaActualizar.Precio = poliza.Precio;
-                //polizaActualizar.TipoRiesgo = poliza.TipoRiesgo;
-                //polizaActualizar.Activo = Convert.ToBoolean(0);
-                //polizaActualizar.UsuarioCreacion = poliza.UsuarioCreacion;
-                //polizaActualizar.FechaCreacion = fecha;
-                //int pruebaf = context.SaveChanges();
                 var polizaActualizar = context.Polizas.SingleOrDefault(x => x.IdPoliza == poliza.IdPoliza);
-
                 polizaActualizar.IdPoliza = poliza.IdPoliza;
                 polizaActualizar.TipoPoliza = poliza.TipoPoliza;
                 polizaActualizar.Nombre = poliza.Nombre;

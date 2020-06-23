@@ -4,6 +4,8 @@
     <EntitySet Name="Polizas" EntityType="ModeloGAP.Poliza" />
     <EntitySet Name="TipoPolizas" EntityType="ModeloGAP.TipoPoliza" />
     <EntitySet Name="TipoRiesgoes" EntityType="ModeloGAP.TipoRiesgo" />
+    <EntitySet Name="Clientes" EntityType="ModeloGAP.Cliente" />
+    <EntitySet Name="PolizaClientes" EntityType="ModeloGAP.PolizaCliente" />
   </EntityContainer>
   <EntityType Name="Poliza">
     <Key>
@@ -36,5 +38,30 @@
     <Property Name="IdRiesgo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Activo" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="Int32" Nullable="false" />
+    <Property Name="Cedula" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Edad" Type="Int32" Nullable="false" />
+    <Property Name="Nacionalidad" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="PolizaCliente">
+    <Key>
+      <PropertyRef Name="IdPolizaCliente" />
+    </Key>
+    <Property Name="IdPolizaCliente" Type="Int32" Nullable="false" />
+    <Property Name="IdCliente" Type="Int32" Nullable="false" />
+    <Property Name="IdPoliza" Type="Int32" Nullable="false" />
+    <Property Name="PorcentajeCobertura" Type="Int32" Nullable="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <Property Name="FechaCreacion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UsuarioCreacion" Type="DateTime" Nullable="false" Precision="3" />
   </EntityType>
 </Schema>

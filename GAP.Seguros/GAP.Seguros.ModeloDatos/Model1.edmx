@@ -5,6 +5,19 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="ModeloGAP.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="IdCliente" />
+          </Key>
+          <Property Name="IdCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cedula" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Edad" Type="int" Nullable="false" />
+          <Property Name="Nacionalidad" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
         <EntityType Name="Poliza">
           <Key>
             <PropertyRef Name="IdPoliza" />
@@ -20,6 +33,18 @@
           <Property Name="Activo" Type="bit" Nullable="false" />
           <Property Name="UsuarioCreacion" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PolizaCliente">
+          <Key>
+            <PropertyRef Name="IdPolizaCliente" />
+          </Key>
+          <Property Name="IdPolizaCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdCliente" Type="int" Nullable="false" />
+          <Property Name="IdPoliza" Type="int" Nullable="false" />
+          <Property Name="PorcentajeCobertura" Type="int" Nullable="false" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+          <Property Name="FechaCreacion" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="TipoPoliza">
           <Key>
@@ -38,7 +63,9 @@
           <Property Name="Activo" Type="bit" Nullable="false" />
         </EntityType>
         <EntityContainer Name="ModeloGAPStoreContainer">
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Poliza" EntityType="Self.Poliza" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PolizaCliente" EntityType="Self.PolizaCliente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TipoPoliza" EntityType="Self.TipoPoliza" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TipoRiesgo" EntityType="Self.TipoRiesgo" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -50,6 +77,8 @@
           <EntitySet Name="Polizas" EntityType="ModeloGAP.Poliza" />
           <EntitySet Name="TipoPolizas" EntityType="ModeloGAP.TipoPoliza" />
           <EntitySet Name="TipoRiesgoes" EntityType="ModeloGAP.TipoRiesgo" />
+          <EntitySet Name="Clientes" EntityType="ModeloGAP.Cliente" />
+          <EntitySet Name="PolizaClientes" EntityType="ModeloGAP.PolizaCliente" />
         </EntityContainer>
         <EntityType Name="Poliza">
           <Key>
@@ -82,6 +111,31 @@
           <Property Name="IdRiesgo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Activo" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="IdCliente" />
+          </Key>
+          <Property Name="IdCliente" Type="Int32" Nullable="false" />
+          <Property Name="Cedula" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Edad" Type="Int32" Nullable="false" />
+          <Property Name="Nacionalidad" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Activo" Type="Boolean" Nullable="false" />
+          <Property Name="UsuarioCreacion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="PolizaCliente">
+          <Key>
+            <PropertyRef Name="IdPolizaCliente" />
+          </Key>
+          <Property Name="IdPolizaCliente" Type="Int32" Nullable="false" />
+          <Property Name="IdCliente" Type="Int32" Nullable="false" />
+          <Property Name="IdPoliza" Type="Int32" Nullable="false" />
+          <Property Name="PorcentajeCobertura" Type="Int32" Nullable="false" />
+          <Property Name="Activo" Type="Boolean" Nullable="false" />
+          <Property Name="FechaCreacion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UsuarioCreacion" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -121,6 +175,33 @@
                 <ScalarProperty Name="Activo" ColumnName="Activo" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="IdRiesgo" ColumnName="IdRiesgo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clientes">
+            <EntityTypeMapping TypeName="ModeloGAP.Cliente">
+              <MappingFragment StoreEntitySet="Cliente">
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="Nacionalidad" ColumnName="Nacionalidad" />
+                <ScalarProperty Name="Edad" ColumnName="Edad" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PolizaClientes">
+            <EntityTypeMapping TypeName="ModeloGAP.PolizaCliente">
+              <MappingFragment StoreEntitySet="PolizaCliente">
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="PorcentajeCobertura" ColumnName="PorcentajeCobertura" />
+                <ScalarProperty Name="IdPoliza" ColumnName="IdPoliza" />
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+                <ScalarProperty Name="IdPolizaCliente" ColumnName="IdPolizaCliente" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

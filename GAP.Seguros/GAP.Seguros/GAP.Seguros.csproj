@@ -163,7 +163,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\Home1Controller.cs" />
+    <Compile Include="Controllers\PolizaClienteController.cs" />
     <Compile Include="Controllers\PolizaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -214,6 +216,14 @@
     <Content Include="Views\Poliza\Nuevo.cshtml" />
     <Content Include="Views\Poliza\Actualizar.cshtml" />
     <Content Include="Views\Poliza\Detalle.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
+    <Content Include="Views\Cliente\Nuevo.cshtml" />
+    <Content Include="Views\Cliente\Detalle.cshtml" />
+    <Content Include="Views\PolizaCliente\Index.cshtml" />
+    <Content Include="Views\PolizaCliente\Nuevo.cshtml" />
+    <Content Include="Views\PolizaCliente\Actualizar.cshtml" />
+    <Content Include="Views\PolizaCliente\Detalle.cshtml" />
+    <Content Include="Views\Cliente\Actualizar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

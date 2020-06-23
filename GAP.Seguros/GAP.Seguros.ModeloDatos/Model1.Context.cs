@@ -28,5 +28,7 @@ namespace GAP.Seguros.ModeloDatos
         public virtual DbSet<Poliza> Polizas { get; set; }
         public virtual DbSet<TipoPoliza> TipoPolizas { get; set; }
         public virtual DbSet<TipoRiesgo> TipoRiesgoes { get; set; }
+        public virtual DbSet<Cliente> Clientes { get; set; }
+        public virtual DbSet<PolizaCliente> PolizaClientes { get; set; }
     }
 }

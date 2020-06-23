@@ -60,3 +60,4 @@ C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloD
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\obj\Debug\GAP.Seguros.ModeloDatos.csproj.CopyComplete
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\obj\Debug\GAP.Seguros.ModeloDatos.dll
 C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\obj\Debug\GAP.Seguros.ModeloDatos.pdb
+C:\Users\framirez\Documents\GitHub\GAP_INSURANCE\GAP.Seguros\GAP.Seguros.ModeloDatos\obj\Debug\GAP.Seguros.ModeloDatos.csprojAssemblyReference.cache
